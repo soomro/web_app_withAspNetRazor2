@@ -21,8 +21,13 @@ namespace web_app_withAspNetRazor2.Controllers
         }
         
         // Edit customer
-        public ActionResult Edit(int Id)
+        // with ? it can accept null value  
+        public ActionResult Edit(int? Id)
         {
+            if (Id.HasValue)
+            {
+                // fetch from database . Hämta från databas
+            }
             return View();
         }
 
