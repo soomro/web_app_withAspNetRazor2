@@ -13,5 +13,23 @@ namespace web_app_withAspNetRazor2.Controllers
         {
             return View();
         }
+
+        // Add customer
+        public ActionResult Add()
+        {
+            return View();
+        }
+        
+        // Edit customer
+        public ActionResult Edit(int Id)
+        {
+            return View();
+        }
+
+        // Delete customer
+        public string Delete()
+        {
+            return "Delete";
+        }
     }
 }
