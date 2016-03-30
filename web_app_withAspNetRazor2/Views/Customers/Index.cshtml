@@ -1,4 +1,5 @@
-﻿
+﻿@model List<web_app_withAspNetRazor2.Models.Customer>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -12,18 +13,12 @@
     </thead>
     
         <tbody>
-            @for (var i = 0; i < 10; i++)
+            @foreach (var customer in Model)
             {
-                <tr class="row">
-                    <td>
-                        @(i+1)
-                    </td>
-                    <td>
-                        @(i+2)
-                    </td>
-                    <td>
-                        @i
-                    </td>
+                <tr>
+                    <td>@customer.ContactTitle</td>
+                    <td>@customer.ContactName</td>
+                    <td>@customer.CompanyName</td>
                 </tr>
             }
         </tbody>

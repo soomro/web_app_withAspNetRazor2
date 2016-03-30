@@ -32,5 +32,12 @@ namespace web_app_withAspNetRazor2.Controllers
 
             return View();
         }
+
+        public ActionResult app()
+        {
+            ViewBag.Message = "Your app page.";
+
+            return View();
+        }
     }
 }
