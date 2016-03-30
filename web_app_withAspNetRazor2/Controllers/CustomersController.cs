@@ -9,15 +9,12 @@ namespace web_app_withAspNetRazor2.Controllers
 {
     public class CustomersController : Controller
     {
+        Northwnd context = new Northwnd();
+
         // GET: Customers
         public ActionResult Index()
         {
-            List<Customer> customers;
-
-            using(Northwnd a = new Northwnd())
-            {
-                customers = a.Customers.OrderBy(c => c.CompanyName).ToList();
-            }
+            List<Customer> customers = context.Customers.OrderBy(c => c.ContactName).ToList();
 
             return View(customers);
         }
