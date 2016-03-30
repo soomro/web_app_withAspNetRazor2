@@ -25,6 +25,7 @@ namespace web_app_withAspNetRazor2.Controllers
         // Add customer
         public ActionResult Add()
         {
+            //TBD
             return View();
         }
         
@@ -32,17 +33,28 @@ namespace web_app_withAspNetRazor2.Controllers
         // with ? it can accept null value  
         public ActionResult Edit(int? Id)
         {
-            if (Id.HasValue)
-            {
-                // fetch from database . Hämta från databas
-            }
+            //TBD
             return View();
         }
 
         // Delete customer
         public string Delete()
         {
+            //TBD
             return "Delete";
         }
+
+        public ActionResult Detail(string Id)
+        {
+            //TBD
+            return View();
+        }
+
+        public ActionResult Edit(string Id)
+        {
+            //TBD
+            return View();
+        }
+
     }
 }
