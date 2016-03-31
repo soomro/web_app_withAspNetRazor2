@@ -2,8 +2,32 @@
 
 @{
     ViewBag.Title = "Detail";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Detail</h2>
+<h2>Customer</h2>
 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>Contact Title</th>
+            <th>Contact Name</th>
+            <th>Company Name</th>
+            <th>Country</th>
+            <th>Address</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.CustomerID</td>
+            <td>@Model.ContactTitle</td>
+            <td>@Model.ContactName</td>
+            <td>@Model.CompanyName</td>
+            <td>@Model.Country</td>
+            <td>@Model.Address</td>
+            <td>@Model.City</td>
+        </tr>
+    </tbody>
+</table>
+<br />

@@ -17,11 +17,13 @@
             @foreach (var customer in Model)
             {
                 <tr>
+                    <td>@customer.CustomerID</td>
                     <td>@customer.ContactTitle</td>
                     <td>@customer.ContactName</td>
                     <td>@customer.CompanyName</td>
                     <td><a href="/Customers/Detail/@customer.CustomerID" class="btn btn-primary" > Visa</a></td>
-                    <td><a href="/Customers/Edit/@customer.CustomerID" class="btn btn-primary"> Visa</a></td>
+                    <td><a href="/Customers/Edit/@customer.CustomerID" class="btn btn-primary"> Andra</a></td>
+
                 </tr>
             }
         </tbody>

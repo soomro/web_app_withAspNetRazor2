@@ -26,13 +26,8 @@ namespace web_app_withAspNetRazor2.Controllers
             return View();
         }
         
-        // Edit customer
-        // with ? it can accept null value  
-        public ActionResult Edit(int? Id)
-        {
-            //TBD
-            return View();
-        }
+
+
 
         // Delete customer
         public string Delete()
@@ -41,12 +36,23 @@ namespace web_app_withAspNetRazor2.Controllers
             return "Delete";
         }
 
+        //
+        //want: when i click item, it fetches details for customer and show on detail page.
+        //
         public ActionResult Detail(string Id)
         {
-            //TBD
-            return View();
+            Customer customer = context.Customers.FirstOrDefault(c => c.CustomerID == Id);
+            if(customer == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View(customer);
         }
 
+        //// Edit customer
+        //// with ? it can accept null value  
+        //public ActionResult Edit(int? Id)
         public ActionResult Edit(string Id)
         {
             //TBD
